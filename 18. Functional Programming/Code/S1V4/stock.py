@@ -21,6 +21,6 @@ def get_books(filename, raw=False):
     else:
         if raw:
             return data['books']
-        return [Book(**book) for book in data['books']]
+        return [Book(**book) for book in data['books']] #list comprehension, dictionary unpacking, object creation
     
 BOOKS = get_books('books.json')
