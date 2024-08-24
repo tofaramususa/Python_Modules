@@ -1,5 +1,3 @@
-Here’s a detailed `README.md` on "Python Lists" with an emphasis on covering both basic and advanced topics, along with code examples and explanations.
-
 # Python Lists: A Comprehensive Guide
 
 This document provides an in-depth look at Python lists, a fundamental data structure in Python. Lists are versatile and widely used, and this guide will cover their creation, manipulation, and advanced features.
