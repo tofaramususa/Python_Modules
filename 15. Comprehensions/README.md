@@ -130,3 +130,4 @@ Here, a list of all possible pairs is created using two `for` loops in a list co
 
 ## Conclusion
 Python comprehensions offer a powerful and expressive way to work with lists, dictionaries, and sets. By mastering these techniques, you can write more concise and efficient code. This guide provides an overview of the basic and advanced uses of comprehensions, along with practical examples to help you implement them in your projects.
+
