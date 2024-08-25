@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository explores utilizes the advanced features of Python. It includes specific examples and explanations.
+This repository explores and utilizes the advanced features of Python. It includes specific code examples and explanations.
 
 ### Topics Covered
 
