@@ -1,8 +1,8 @@
 # import datetime as datetime
 import time as time
-import calendar as calendar
+from datetime import datetime as datetime
 
-seconds_since_start = time.gmtime() - time.gmtime(0)
-dateToday = ""
-print(f"Seconds since January 1, 1970: {seconds_since_start} or {seconds_since_start:.2e} in scientific notation")
-print({dateToday})
+seconds_since_start = time.time()
+dateToday = datetime.now().strftime("%b %d %Y")
+print(f"Seconds since January 1, 1970: {seconds_since_start:,.4f} or {seconds_since_start:.2e} in scientific notation")
+print(dateToday)

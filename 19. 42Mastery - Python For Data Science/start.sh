@@ -20,9 +20,6 @@ if [ $? -ne 0 ]; then
 fi
 echo "Docker container started successfully: $container_id"
 
-# Wait a moment to ensure the container is fully initialized
-sleep 5
-
 # Enter the running container interactively
 docker exec -it "$container_id" /bin/sh
 
