@@ -14,11 +14,18 @@ ARG UID=10001
 RUN adduser \
     --disabled-password \
     --gecos "" \
-    --home "/nonexistent" \
+    --home "/app" \
     --shell "/sbin/nologin" \
     --no-create-home \
     --uid "${UID}" \
     appuser
+
+# Install dependencies if requirements.txt exists, with robust error handling
+RUN if [ -f requirements.txt ]; then \
+		pip install --user --no-cache-dir -r requirements.txt; \
+	else \
+		echo "Warning: requirements.txt not found. Skipping dependency installation."; \
+	fi
 
 # Copy application code into the container
 COPY . .
@@ -29,12 +36,6 @@ RUN chown -R appuser:appuser /app
 # Switch to the non-root user
 USER appuser
 
-# Install dependencies if requirements.txt exists, with robust error handling
-RUN if [ -f requirements.txt ]; then \
-        pip install --no-cache-dir -r requirements.txt; \
-    else \
-        echo "Warning: requirements.txt not found. Skipping dependency installation."; \
-    fi
 
 # Set a default command to run a Python application (replace "app" with your entry module/script)
-CMD ["/bin/sh", "-c" ,"sleep infinity"]
+CMD ["sleep", "infinity"]
